@@ -6,10 +6,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [
-        'http://localhost:3000',
-        'http://127.0.0.1:3000',
-    ],
+    'allowed_origins' => ['https://triage-med-front-end-cid9.vercel.app'],
 
     'allowed_origins_patterns' => [
         '#^https?://(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$#',
