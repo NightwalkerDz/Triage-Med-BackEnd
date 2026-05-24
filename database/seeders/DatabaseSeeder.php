@@ -23,10 +23,10 @@ class DatabaseSeeder extends Seeder
         $this->call(TriageConfigSeeder::class);
 
         $medecins = [
-            ['nom' => 'Martin', 'prenom' => 'Sophie', 'specialite' => 'Médecine générale', 'email' => 's.martin@clinique.fr', 'telephone' => '01 23 45 67 01'],
-            ['nom' => 'Bernard', 'prenom' => 'Jean', 'specialite' => 'Urgences', 'email' => 'j.bernard@clinique.fr', 'telephone' => '01 23 45 67 02'],
-            ['nom' => 'Dubois', 'prenom' => 'Marie', 'specialite' => 'Cardiologie', 'email' => 'm.dubois@clinique.fr', 'telephone' => '01 23 45 67 03'],
-            ['nom' => 'Petit', 'prenom' => 'Luc', 'specialite' => 'Pédiatrie', 'email' => 'l.petit@clinique.fr', 'telephone' => '01 23 45 67 04'],
+            ['nom' => 'بن سعيد', 'prenom' => 'عبد الرحمان', 'specialite' => 'Médecine générale', 'email' => 'a.bensaid@clinique.dz', 'telephone' => '05 60 12 34 01'],
+            ['nom' => 'بوجمعة', 'prenom' => 'فاطمة', 'specialite' => 'Urgences', 'email' => 'f.boujemaa@clinique.dz', 'telephone' => '05 60 12 34 02'],
+            ['nom' => 'حداد', 'prenom' => 'أحمد', 'specialite' => 'Cardiologie', 'email' => 'a.haddad@clinique.dz', 'telephone' => '05 60 12 34 03'],
+            ['nom' => 'مخلوفي', 'prenom' => 'نورة', 'specialite' => 'Pédiatrie', 'email' => 'n.mekhloufi@clinique.dz', 'telephone' => '05 60 12 34 04'],
         ];
 
         foreach ($medecins as $medecin) {
