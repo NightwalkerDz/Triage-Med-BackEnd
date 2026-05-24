@@ -28,6 +28,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/patients', [PatientController::class, 'store']);
     Route::get('/patients', [PatientController::class, 'index']);
     Route::get('/patients/{patient}', [PatientController::class, 'show']);
+    Route::delete('/patients/{patient}', [PatientController::class, 'destroy']);
+
+    Route::delete('/triage/{triage}', [TriageController::class, 'destroy']);
 
     Route::middleware('admin')->prefix('admin')->group(function () {
         Route::get('/urgency-levels', [AdminUrgencyLevelController::class, 'index']);

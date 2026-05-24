@@ -104,6 +104,15 @@ class PatientController extends Controller
         return response()->json($this->formatPatientDetail($patient));
     }
 
+    public function destroy(Patient $patient): JsonResponse
+    {
+        $patient->delete();
+
+        $this->triageService->clearCache();
+
+        return response()->json(['message' => 'Patient supprimé avec succès.']);
+    }
+
     private function formatPatientList(Patient $patient): array
     {
         return [

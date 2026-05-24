@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Triage;
 use App\Services\TriageService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -28,5 +29,14 @@ class TriageController extends Controller
             'symptomes_declencheurs' => $resultat['symptomes_declencheurs'],
             'regle_appliquee' => $resultat['regle_appliquee'],
         ]);
+    }
+
+    public function destroy(Triage $triage): JsonResponse
+    {
+        $triage->delete();
+
+        $this->triageService->clearCache();
+
+        return response()->json(['message' => 'Triage supprimé avec succès.']);
     }
 }
